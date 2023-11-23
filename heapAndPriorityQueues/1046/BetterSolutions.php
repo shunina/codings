@@ -1,3 +1,5 @@
+<?php
+
 class BetterSolutions {
 
     function lastStoneWeight($stones) {
