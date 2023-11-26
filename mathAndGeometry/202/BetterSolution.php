@@ -24,6 +24,3 @@ class BetterSolution {
         return $sum;
     }
 }
-
-
-print_r((new BetterSolution())->isHappy(19) ? 'true' : 'false');

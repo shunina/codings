@@ -26,5 +26,3 @@ class Solution {
         return $output;
     }
 }
-
-print_r((new Solution())->isHappy(19) ? 'true' : 'false');
