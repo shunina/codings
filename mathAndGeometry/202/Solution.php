@@ -7,25 +7,24 @@ class Solution {
      * @return Boolean
      */
     function isHappy($n) {
-        $visits = [];
-        while (!isset($visits[$sum])){
-            $sum = $this->sumOfSquare($n);
-            if($sum == 1){
-                return true;
-            }
-            $visits[$sum] = true;
+        $visits = [];        
+        while (!isset($visits[$n]) && $n!=1){
+            $visits[$n] = true;
+            $n = $this->sumOfSquare($n);
         }        
-        return false;
+        return $n==1;
     }
 
-    function sumOfSquare(int $number){
+    function sumOfSquare(int $n){
         $output = 0;
-        while ($number){
-            $digit = $number%10;
+        while ($n){
+            $digit = $n%10;
             $digit = $digit * $digit;
             $output += $digit;
-            $number = $number/10;
+            $n =  (int)($n/10);
         }
         return $output;
     }
 }
+
+print_r((new Solution())->isHappy(19) ? 'true' : 'false');
