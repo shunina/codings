@@ -1,6 +1,6 @@
 <?php
 
-class Solution {
+class BetterSolution {
 
     /**
      * @param Integer $n
